@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display);
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', sans-serif; }
+
+body {
+  font-family: 'Playfair Display', serif; }
+
+body {
+  background-image: url("../assets/golfCourse_gallery1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+h1, h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white; }
+
+.btn-primary {
+  background-color: #55A958;
+  border: #55A958; }
+  .btn-primary:hover {
+    background-color: #66b268; }
+  .btn-primary:active {
+    background-color: #66b268; }
+
+#packageContainer {
+  display: none;
+  background-color: rgba(0, 255, 0, 0.3);
+  margin: 50px -300px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  color: white; }
+
+.instructions {
+  margin: 10px;
+  border-bottom: 1px solid #d3d3d3; }
+
+#myBtn {
+  margin: 75px -50px;
+  position: relative;
+  top: 50%;
+  left: 50%; }
+
+.navbar-default {
+  -webkit-box-shadow: inset 2px 2px 2px 1px;
+  -moz-box-shadow: inset 2px 2px 2px 1px;
+  box-shadow: inset 2px 2px 2px 1px;
+  border: none;
+  background-color: #252525; }
+  .navbar-default .navbar-brand {
+    padding: 10px; }
+
+#favIcon {
+  margin: 10px;
+  zoom: 70%; }
+
+.flashMessage {
+  display: none;
+  padding: 10px;
+  margin-top: 100px;
+  background-color: green; }
+
+.input-group:not(:last-child) {
+  margin-bottom: 20px; }
+
+.modal-header {
+  background-color: #252525;
+  color: white; }
+
+.modal-footer {
+  background-color: #252525;
+  color: white; }
+
+.modal-content {
+  position: relative;
+  background-image: url("../assets/pattern.png");
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s; }
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }

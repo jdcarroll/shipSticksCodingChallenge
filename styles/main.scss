@@ -1,0 +1,109 @@
+// includes or partials 
+@import  'variables',
+         'mixins';
+
+// adds background image and sets it to cover the full screen
+body {
+    background-image : url('../assets/golfCourse_gallery1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1, h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: $mainHeadingColor;
+}
+// overwriting bootstrap colors for btn-primary
+.btn-primary{
+    background-color: $buttonBackground;
+    border : $buttonBackground;
+    &:hover {
+        background-color: $buttonHoverBackground;
+    }
+    &:active {
+        background-color: $buttonHoverBackground;
+    }
+}
+// sets position and styles for main page flash message
+#packageContainer{
+    display: none;
+    background-color : $mainPageNotificationBcolor;
+    margin: 50px -300px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+    color: white;
+}
+// sets styles for the instructions paragraph on modal
+.instructions {
+    margin: 10px;
+    border-bottom: 1px solid $seperatorColor;
+}
+// main button that launches modal
+#myBtn{
+    margin: 75px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+// overwriting bootstrap styles to implement custom styles for would be navbar
+.navbar-default{
+    @include box-shadow(2px, 2px, 2px, 1px, $shadowColor);
+    border: none;
+    background-color: $navBackgroundColor;
+    // main page header 
+    .navbar-brand {
+        padding: 10px;
+    }
+
+}
+// set position and stize for escape hatch
+#favIcon {
+    margin: 10px;
+    zoom: 70%;
+}
+// styles for the flash messages
+.flashMessage {
+    display: none;
+    padding : 10px;
+    margin-top: 100px;
+    background-color : green;
+}
+// add 20pxs to the bottom all inputs except the last one
+.input-group:not(:last-child) {
+    margin-bottom: 20px;
+}
+// styles for the modal header
+.modal-header{
+    background-color: #252525;
+    color: white;
+}
+// styles for the modal footer and execution button
+.modal-footer {
+    background-color: #252525;
+    color: white;
+}
+
+// /* Modal Content */
+.modal-content {
+    position: relative;
+    background-image : url('../assets/pattern.png');
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+// /* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ship Sticks Code Challenge</title>
+	<!-- Bower Components -->
+	<link rel="stylesheet" type="text/css" href="bower/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower/font-awesome/css/font-awesome.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<!-- Would be navigation bar but just header -->
+<nav class="navbar navbar-default">
+		<div class="row">
+			<!-- Ship Sticks Brand icon and escape hatch assuming naviagtion -->
+			<a class="navbar-brand" href="#">
+		        <img id="favIcon" alt="Brand" src="assets/ship_icon.png">
+		    </a>
+		    <!-- main heading and descripter of app -->
+		    <h1>Ship Sticks <small>- Shipping Calculator</small></h1>
+		</div>
+</nav>
+	<!-- container for button to launch calculator -->
+	<div class="container">
+		<!-- Trigger/Open The Modal -->
+		<div class="row">
+			 <button id="myBtn" class="btn btn-primary btn-lg">Launch Calculator</button>
+		</div>
+		<!-- Main Page Flash Message Container -->
+		<div id="packageContainer" class="col-md-6">
+			<h3 id="mainPageFlash"></h3>
+		</div>
+	</div>	
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+	<!-- Modal content -->
+<div class="modal-content">
+	<!-- modal header and descripter -->
+  <div class="modal-header">
+  	<!-- Icon and Header -->
+    <h2> <img id="favIcon" alt="Brand" src="assets/ship_icon.png"> The Calculator</h2>
+  </div>
+  <div class="modal-body ">
+  	<!-- Brief Description of how to use the calculator -->
+  	<div class="instructions row">
+  		<h2>Instructions</h2>
+		<p> This tool is designed to help you calculate the out the package size that you are going to require to ship your packet. Simply choose your package type and enter in the demessions of your items.</p>
+  	</div>
+    <div class="row">
+    	<div class="col-md-5">
+    		<!-- The calculator Form -->
+    		<form id="calculatorForm" action="/calculate" method="post">
+	    		<div class="input-group">
+	    			<!-- The Selector Option which gets pouplated dynamically by jquery -->
+				  	<select class="form-control">
+				  		<option value='blank'>Select a Package Type</option>
+				  	</select>
+				</div>
+				<div class="input-group">
+				<!-- User Input length of there Package -->
+				  <input type="number" class="form-control" placeholder="Length" aria-describedby="basic-addon1" id="length" required='required'>
+				  <span class="input-group-addon" id="basic-addon1">in</span>
+				</div>
+				<div class="input-group">
+				<!-- User Input height of there Package -->
+				  <input type="number" class="form-control" placeholder="Height" aria-describedby="basic-addon1" id="height" required>
+				  <span class="input-group-addon" id="basic-addon1">in</span>
+				</div>
+				<div class="input-group">
+				<!-- User Input width of there Package -->
+				  <input type="number" class="form-control" placeholder="Width" aria-describedby="basic-addon1" id="width" required>
+				  <span class="input-group-addon" id="basic-addon1">in</span>
+				</div>
+				<div class="input-group">
+				<!-- User Input weight of there Package -->
+				  <input type="number" class="form-control" placeholder="Weight" aria-describedby="basic-addon1" id="weight" required>
+				  <span class="input-group-addon" id="basic-addon1">lb</span>
+				</div>
+		    </form>
+    	</div>
+    	<!-- After processing modal flash message appears with succes or error -->
+    	<div id="flash" class=" flashMessage col-md-7">
+    		<!-- stores empty h3 to provide placholder -->
+    		<h3></h3>
+    	</div>
+    </div>
+  </div>
+  <!-- the Footerof modal and container for execution button -->
+  <div class="modal-footer ">
+  	<!-- send the form data of to server and kivk off application -->
+    <button id="calculate" class="btn btn-primary">Calculate</button>
+  </div>
+</div>
+
+	<!-- bower components and jquery -->
+	<script src="/bower/jquery/dist/jquery.min.js"></script>
+	<!-- my custom javascript -->
+	<script src="js/main.js"></script>
+</body>
+</html>

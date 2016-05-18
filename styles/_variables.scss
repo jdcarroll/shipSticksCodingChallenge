@@ -1,0 +1,17 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display);
+// setup fonts
+
+body{
+	font-family: 'Playfair Display', serif;
+}
+
+// Color variables
+$navBackgroundColor : #252525;
+$mainHeadingColor : white;
+$mainPageNotificationBcolor : rgba(0,255,0,.3);
+$buttonBackground : #55A958;
+$buttonHoverBackground : #66b268;
+$seperatorColor : #d3d3d3; 
+$shadowColor : rgba(0, 0, 0, 0.2);
