@@ -7,7 +7,7 @@ I created an install script that kicks everything off.
 Just make sure that you have node and mongo installed
 
 ###Step1
-make sure that mongo is running and is exceptinng connections 
+make sure that mongo is running and is excepting connections 
 ```
 mongod
 ```
