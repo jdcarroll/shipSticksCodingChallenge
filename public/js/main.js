@@ -9,6 +9,8 @@ $(document).ready(function(){
 	var btn = document.getElementById("myBtn");
 	// Create counter to prevent ajax load happining more than once
 	var counter = 0;
+	// close span
+	var close = $('.close')[0];
 	// When the user clicks on the button, open the modal 
 	btn.onclick = function() {
 		// change style property to block and enable th view of the modal
@@ -30,6 +32,10 @@ $(document).ready(function(){
 	    $('#calculatorForm')[0].reset();
 	    // hide the flash message element to give a clean template for user 
 	    $('#flash').hide();
+	}
+	// When the user clicks on <span> (x), close the modal
+	close.onclick = function() {
+	    modal.style.display = "none";
 	}
 	// the execution function to the db
 	$("#calculate").click(function(){

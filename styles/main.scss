@@ -7,10 +7,22 @@ body {
     background-image : url('../assets/golfCourse_gallery1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e5e5e5+0,000000+99 */
+    background: #e5e5e5; /* Old browsers */
+    background: -moz-linear-gradient(top, #e5e5e5 0%, #000000 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e5e5e5 0%,#000000 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e5e5e5 0%,#000000 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    copy
+
 }
 h1, h3 {
     font-family: 'Josefin Sans', sans-serif;
     color: $mainHeadingColor;
+}
+span {
+    color:white;
+
 }
 // overwriting bootstrap colors for btn-primary
 .btn-primary{
@@ -40,7 +52,7 @@ h1, h3 {
 }
 // main button that launches modal
 #myBtn{
-    margin: 75px -50px; 
+    margin: 55px auto; 
     position:relative;
     top:50%; 
     left:50%;
@@ -81,6 +93,18 @@ h1, h3 {
 .modal-footer {
     background-color: #252525;
     color: white;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    &:hover,
+    &:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
 }
 
 // /* Modal Content */
